@@ -73,6 +73,7 @@ img {
 .main {
     display: flex;
     padding-bottom: 50px;
+    flex-wrap: wrap;
 
 }
 
@@ -84,6 +85,12 @@ img {
 
 
 }
+
+@media screen and (max-width: 1000px)  {
+    .placeholder {
+      display: none;
+    }
+  }
 .left {
     flex: 1;
 }
