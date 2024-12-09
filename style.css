@@ -11,13 +11,45 @@ ul {
 
 body {
     font-family: Roboto;
-    background-color: #1F2937;
     color: #FFF;
     display: flex;
     flex-direction: column;
-    padding: 110px;
     height: 100vh;
+    padding: 0;
+    margin: 0;
 }
+
+img {
+    max-width: 100%;
+    
+    height: auto;
+    
+    /* Maintain aspect ratio */
+    flex: 1 1 auto;
+    /* Allow images to grow and shrink */
+    object-fit: cover;
+   
+    border-radius: 10px;
+  
+}
+
+.main, .header, .footer{
+    background-color: #1F2937;
+    padding: 20px 100px;
+}
+
+.info, .newsletter {
+    background-color: #FFF;
+    padding: 20px 100px;
+}
+
+.quote{
+    background-color: #E5E7EB;
+    padding: 20px 200px;
+    color:black
+}
+
+
 
 /* Header portion */
 .header {
@@ -40,12 +72,12 @@ body {
 
 .main {
     display: flex;
-    margin: 100px 0;
+    padding-bottom: 50px;
 
 }
 
 .placeholder {
-    background-color: grey;
+    
     text-align: center;
     align-content: center;
     flex: 1;
@@ -69,12 +101,11 @@ body {
     color: #E5E7EB;
 }
 
-.left > .button {
+.button {
     background-color: #3882F6;
     border: none;
     border-radius: 5px;
     color: #FFF;
-    border: none;
     padding: 10px 30px;
     text-align: center;
     text-decoration: none;
@@ -88,29 +119,113 @@ body {
 .info {
     display: flex;
     flex-direction: column;
-    align-items: center;
     background-color: white;
     color: #1F2937;
+    flex-wrap: wrap;
+    
+    
 }
 
 #info-title {
     font-size: 36px;
-    
-    font-weight: 900px;
-    flex:1;
+    font-weight: 900px; 
+    justify-content: center;
+    display: flex;
 
 }
 
 .products {
     display: flex;
-    justify-content: space-between;
+    gap: 36px;
+    padding: 20px 100px;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+    
+    
+}
+
+.placeholder-image {
+    background-color: #FFF;  
+    text-align: center;
+    align-content: center;
+    justify-content: center;
+    width: 100%;
+    
+}
+
+
+
+.product {
+    
+    
+    flex-direction: column;
+    justify-content: stretch;
     align-items: center;
-    gap: 10px;
+    text-align: center;
+    text-wrap: wrap;
+    width: 300px;
 
     
 }
-/* do dokończenia sekacja products */
-.product {
-    flex:1;
-    width: 100px;
+
+/* QUOTE portion */
+
+.quote{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+.quote > #quote {
+    text-align: center;
+    font-style: light italic;
+    font-size: 36px;
+    color: #1F2937;
+    margin-bottom: 0;
+}
+
+.quote > #author {
+    text-align: right;
+    font-size: 26px;
+    margin-top: 10px;
+}
+
+/* Newsletter portion */
+
+.newsletter {
+    padding: 80px 160px;
+}
+
+#signup {
+    color:#FFF;
+    background-color: #3882F6;
+    display: flex;
+    padding: 20px 150px;
+    border-radius: 20px;
+    font-size: 20px;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+
+
+}
+
+#signup > .button {
+    border: 2px white solid;
+    height: 50%;
+}
+
+#signup-title {
+    font-weight: 600;
+}
+
+
+/* FOOTER portion */
+.footer {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+
 }
